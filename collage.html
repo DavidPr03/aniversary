@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collage de Recuerdos 💞</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffe4e1, #ffb6c1);
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #d6336c;
+      animation: fadeIn 2s ease;
+    }
+
+    .collage-wrapper {
+      overflow-x: auto;
+    }
+
+    .collage {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .foto {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      background-color: white;
+    }
+
+    .foto img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .foto:hover img,
+    .foto:active img {
+      transform: scale(1.05);
+    }
+
+    .frase {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.85);
+      color: #d6336c;
+      padding: 10px;
+      font-size: 0.9em;
+      font-weight: bold;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+
+    .foto:hover .frase,
+    .foto:active .frase {
+      transform: translateY(0);
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      background: #fff;
+      color: #d6336c;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    a:hover {
+      background: #fcd5ce;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 800px) {
+      .collage {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .collage {
+        grid-template-columns: repeat(3, 70vw);
+      }
+      .collage-wrapper {
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Algunos de Nuestros Momentos Más Bonitos 📸</h1>
+
+  <div class="collage-wrapper">
+    <div class="collage">
+      <div class="foto">
+        <img src="images/foto1.jpg" alt="Recuerdo 1">
+        <div class="frase">Contigo cada instante es eterno.</div>
+      </div>
+      <div class="foto">
+        <img src="images/foto2.jpg" alt="Recuerdo 2">
+        <div class="frase">Tu sonrisa ilumina mi mundo.</div>
+      </div>
+      <div class="foto">
+        <img src="images/foto3.jpg" alt="Recuerdo 3">
+        <div class="frase">Eres mi hogar en cualquier lugar.</div>
+      </div>
+      <div class="foto">
+        <img src="images/foto4.jpg" alt="Recuerdo 4">
+        <div class="frase">A tu lado todo es mejor.</div>
+      </div>
+      <div class="foto">
+        <img src="images/foto5.jpg" alt="Recuerdo 5">
+        <div class="frase">Amarte es mi mayor aventura.</div>
+      </div>
+      <div class="foto">
+        <img src="images/foto6.jpg" alt="Recuerdo 6">
+        <div class="frase">Gracias por tanto amor.</div>
+      </div>
+      <div class="foto">
+        <img src="images/foto7.jpg" alt="Recuerdo 7">
+        <div class="frase">Nuestro amor no tiene límites.</div>
+      </div>
+      <div class="foto">
+        <img src="images/foto8.jpg" alt="Recuerdo 8">
+        <div class="frase">Siempre tú, en todos mis planes.</div>
+      </div>
+      <div class="foto">
+        <img src="images/foto9.jpg" alt="Recuerdo 9">
+        <div class="frase">Eres mi razón de sonreír cada día.</div>
+      </div>
+    </div>
+  </div>
+
+  <a href="index.html">Volver al inicio</a>
+</body>
+</html>
